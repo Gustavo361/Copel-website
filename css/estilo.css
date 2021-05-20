@@ -1,0 +1,418 @@
+@charset 'utf-8';
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Baloo 2', cursive;
+    border: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    background-color: darkorange;
+}
+
+#topo,#banner,#corpo,#inscrevasse,#rodape{
+    float: left;
+}
+
+#topo{
+    width: 100%;
+    background-color: white;
+}
+
+#topo a{
+    font-size: 0.8em;
+    color: white;
+    animation: colorir 5s infinite;
+}
+#logo{
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/logo2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100px;
+    float: left;
+    animation: girar 5s infinite;
+}
+#btn_menu{
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+    background-color: darkorange;
+    border-radius: 10px;
+    animation: colorir 5s infinite;
+}
+
+#menu{
+    width:100%;
+    height: 0%;
+    overflow: hidden;
+    position: fixed;
+    background-color: rgba(255,140,0,0.9);
+    transition: 0.5s;
+}
+#menu:target{
+    height: 100%;
+}
+#btn_fechar{
+    float: right;
+    margin-top: 20px;
+    margin-right: 27px;
+    font-size: 10em;
+    font-weight: 900;
+}
+#menu ul{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    float: left;
+
+}
+#menu ul li{
+    padding: 3%;
+    transition: 0.5s;
+    font-size: 1.4em;
+}
+#menu ul li:hover{
+    background-color: rgba(255,255,255,0.3);
+}
+
+#banner{
+    width: 100%;
+    background-image: url(../img/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-size: 0.9em;
+    color: white;
+    text-shadow: 0.5px 0px 1px #000;
+}
+
+h1,h2{
+    padding: 10px;
+}
+#banner h1{
+    font-size: 1.8em;
+    animation: gira 5s infinite;
+}
+#banner button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 3%;
+    width: 45%;
+    height: 30px;
+    border-radius: 7px;
+    text-align: left;
+    padding-left: 3%;
+    color: darkorange;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+#botoes{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+#botoes i{
+    animation: girar 5s infinite;
+}
+
+#corpo{
+    width: 100%;
+    padding: 3% 4%;
+
+
+}
+.conteudo{
+    width: 100%;
+    background-color: white;
+    text-align: left;
+    font-size: 0.7em;
+    margin-bottom: 3%;
+    border-radius: 7px;
+}
+
+#corpo img{
+    width: 100%;
+    border-radius: 7px 7px 0 0 ;
+}
+
+#corpo h3{
+    text-align: center;
+    font-size: 1.7em;
+    margin-top: 20px;
+}
+#corpo span p{
+    padding: 5%;
+    font-size: 1.3em;
+}
+
+#inscrevase{
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+    text-shadow: 0.5px 0px 1px #000;
+}
+#inscrevase form input,button{
+    width: 98%;
+    height: 40px;
+    border-radius: 7px;
+    margin: 1%;
+    color: darkorange;
+    font-size: 1.1em;
+}
+#inscrevase input::placeholder{
+    color: chocolate;
+    font-size: 0.9em;
+}
+#inscrevase button{
+    background-color: darkorange;
+    color: white;
+    font-size: 1.2em;
+    box-shadow: 0px 0px 3px #fff;
+}
+#rodape{
+    width: 100%;
+    padding: 3% 4%;
+    text-align: center;
+    background-color: chocolate;
+    color: white;
+    text-shadow: 0.5px 0px 1px #000;
+    font-size: 0.9em;
+
+}
+
+#rodape #redes_sociais a{
+    color: rgba(255,255,255,0.7);
+    font-size: 1.7em;
+    text-shadow: none;
+    margin-right: 3%;
+    transition: 0.2s;
+}
+
+
+#rodape #redes_sociais a:hover{
+    color: rgba(255,255,255,1);
+}
+
+#rodape p{
+    margin-top: 10px;
+}
+
+@keyframes girar{
+    from{
+        transform: rotateX(0deg);
+    }to{
+        transform: rotateX(360deg);
+    }
+}
+
+@keyframes colorir{
+    from{
+        background-color: darkorange; 
+        color: white;
+    }to{
+        background-color: white;
+        color: darkorange;
+    }
+}
+
+@media screen and (min-width:400px){
+
+    #banner h1{
+        font-size: 2em;
+    }
+    #banner h2{
+        font-size: 1.6em;
+    }
+
+    #corpo h3{
+        font-size: 2em;
+    }
+    #corpo span p{
+        font-size: 1.6em;
+    }
+
+    #inscrevase{
+        font-size: 1.2em;
+    }
+    #inscrevase form input,button{
+        font-size: 0.9em;
+    }
+
+    #inscrevase button{
+        font-size: 1em;
+    }
+
+    #rodape #redes_sociais a{
+        font-size: 2.3em;
+    }
+
+    #rodape p{
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width:768px){
+
+    #logo{
+        width: 180px;
+        height: 120px;
+        background-image: url(../img/logo4.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 180px;
+        margin-left: 50px;
+        float: left;
+    }
+    #btn_menu,#btn_fechar{
+        display: none;
+    }
+    #menu{
+        width: 70%;
+        height: 120px;
+        float: right;
+        position: relative;
+        background: none;
+    }
+    #menu ul{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    #menu ul li a{
+        color: darkorange;
+        font-size: 0.7em;
+        padding: 0;
+    }
+
+    #btn_menu{
+        margin-top: 30px;
+        margin-right: 5px;
+    }
+
+    #banner h1{
+        font-size: 2.3em;
+    }
+    #banner h2{
+        font-size: 1.8em;
+    }
+
+    #corpo h3{
+        font-size: 2.3em;
+    }
+    #corpo span p{
+        font-size: 1.8em;
+    }
+
+    #inscrevase{
+        font-size: 1.5em;
+    }
+    #inscrevase form input,button{
+        font-size: 1.1em;
+    }
+
+    #inscrevase button{
+        font-size: 1.2em;
+    }
+
+    #rodape #redes_sociais a{
+        font-size: 2.6em;
+    }
+
+    #rodape p{
+        font-size: 1.3em;
+    }
+}
+@media screen and (min-width:1024px){
+    #menu{
+        width: 70%;
+    }
+    #menu ul li a{
+        color: darkorange;
+        font-size: 0.9em;
+        padding: 0;
+    }
+
+
+    #banner{
+        display: flex;
+    }
+    #conteudo_banner{
+        width:  60%;
+    }
+
+    #botoes{
+        width: 40%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #botoes i{
+        font-size: 1.6em;
+    }
+    #banner button{
+        width: 70%;
+        height: 50px;
+    }
+
+    #corpo{
+        display: flex;
+    }
+    #corpo .conteudo{
+        margin-left: 10px;
+    }
+    #corpo h3{
+        font-size: 2em;
+        padding: 0 4%;
+    }
+    #corpo span p{
+        font-size: 1.2em;
+        text-align: justify;
+        text-indent: 30px;
+    }
+    #inscrevase{
+        margin-top: -50px;
+        display: flex;
+        height: 200px;
+        align-items: center;
+
+    }
+
+    #inscrevase div,form{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    #inscrevase div{
+
+        justify-content: flex-start;
+    }
+    #inscrevase form input,button{
+        width: 80%;
+    }
+
+    #rodape p{
+        font-size: 1.6em;
+    }
+
+
+
+}
+
+
+
